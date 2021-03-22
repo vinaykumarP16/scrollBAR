@@ -1,0 +1,265 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family:consolas;
+}
+
+section{
+	padding: 50px;
+	background: #000;
+}
+
+section h2{
+	font-size: 2.5em;
+	color: #fff;
+}
+
+section p{
+	font-size: 1.2em;
+	color: #fff;
+}
+
+::-webkit-scrollbar{
+	width: 0;
+}
+
+
+#scrollPath{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 10px;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.05);
+}
+
+#progressbar{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 10px;
+	
+	background: linear-gradient(to top,#008aff,#00ffe7);
+	animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+	0%,100%{
+filter: hue-rotate(0deg);
+	}
+	50%{
+		filter: hue-rotate(360deg);
+	}
+	
+}
+
+
+#progressbar:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top,#008aff,#00ffe7);
+	filter: blur(10px);	
+}
+#progressbar:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: linear-gradient(to top,#008aff,#00ffe7);
+	filter: blur(30px);	
+}
+/* *{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	display: flex;
+	flex-direction: row;
+	justify-content:center;
+	align-items: center;
+	min-height: 100vh;
+	background: #07ED12;
+	flex-flow: wrap;
+}
+
+.container{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.container .box{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	margin: 40px 0;
+	background: #fff;
+	font-family:consolas;
+	font-size: 2.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgba(0,0,0,0.1);
+}
+
+.container .box.shadow1{
+	              /* x    y    blur */
+	box-shadow: -30px 30px 20px rgba(0,0,0,0.3);
+}
+
+.container .box.shadow2:before{
+	content: '';
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	width: 90%;
+	height: 50px;
+	background: rgba(0, 0, 0, 0.3);
+	transform-origin: left;
+	transform: skewY(5deg);
+	z-index: -1;
+	filter: blur(5px);
+
+}
+
+.container .box.shadow3:before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 50%;
+	height: 30px;
+	background: rgba(0, 0, 0, 0.3);
+	transform-origin: right;
+	transform: skewY(-8deg);
+	z-index: -1;
+	filter: blur(10px);
+
+}
+
+
+.container .box.shadow3:before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 50%;
+	height: 30px;
+	background: rgba(0, 0, 0, 0.3);
+	transform-origin: right;
+	transform: skewY(-8deg);
+	z-index: -1;
+	filter: blur(10px);
+
+}
+
+.container .box.shadow3:before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 50%;
+	height: 30px;
+	background: rgba(0, 0, 0, 0.3);
+	transform-origin: right;
+	transform: skewY(-8deg);
+	z-index: -1;
+	filter: blur(10px);
+
+}
+
+.container .box.shadow3:after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 50%;
+	height: 30px;
+	background: rgba(0, 0, 0, 0.3);
+	transform-origin: left;
+	transform: skewY(8deg);
+	z-index: -1;
+	filter: blur(10px);
+
+}
+
+.container .box.shadow4:before{
+	content: '';
+	position: absolute;
+	bottom: -50px;
+	left: 5%;
+	width:  90%;
+	height: 20px;
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 50%;
+	z-index: -1;
+	filter: blur(10px);
+
+}
+
+.container .box.shadow5:before{
+	content: '';
+	position: absolute;
+	bottom: -15%;
+	left: 5%;
+	width:  90%;
+	height: 90%;
+	background: rgba(0, 0, 0, 0.3);
+	z-index: -1;
+	filter: blur(10px);
+
+}
+
+.container .box.shadow6{
+	background:#07ED12 ;
+border-radius: 15px;
+box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+			15px 15px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container .box.shadow7{
+	background:#07ED12 ;
+border-radius: 15px;
+box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+			15px 15px 15px rgba(0, 0, 0, 0.1),
+			inset  -5px -5px 5px rgba(255, 255, 255, 0.2),
+			inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+} */
+
+
+/* body{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 5rem;
+}
+
+
+p::before{
+	content: 'hello';
+	background: red;
+	display: block;
+	font-size: 20px;
+	display: block;
+	color: #fff;
+	
+}
+
+p::after{
+	display: block;
+	content: 'bye';
+	background: red;
+	display: block;
+	font-size: 20px;
+	color: #fff;
+	
+}
+ */
